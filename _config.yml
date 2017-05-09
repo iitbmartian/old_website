@@ -14,13 +14,13 @@ keep_files:
 
 
 # Site settings
-title: Airspace
-subtitle: "A free HTML5 agency template"
+title: Mars Rover Team, IIT-Bombay
+subtitle: "TeamWebpage"
 url: "" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
+#cover: "/assets/cover.png"
+#logo: "/assets/logo.jpg"
 
 # Build settings
 markdown: kramdown
