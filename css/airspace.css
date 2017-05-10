@@ -159,6 +159,9 @@ font header .navbar-default .navbar-nav li a:hover {
 #intro .section-title p {
   padding-top: 20px;
 }
+#intro .clients-logo-img {
+  padding: 120px 0px;
+}
 /*--
 	service Start
 --*/
@@ -179,6 +182,32 @@ font header .navbar-default .navbar-nav li a:hover {
   color: #666;
 }
 #service .service-item p {
+  color: #888;
+  padding-top: 10px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+}
+/*--
+  service2 Start
+--*/
+#service2 {
+  text-align: center;
+  padding: 0px 0;
+}
+#service2 .service-item {
+  padding-bottom: 30px;
+}
+#service2 .service-item i {
+  font-size: 60px;
+  color: #4A4656;
+}
+#service2 .service-item h4 {
+  padding-top: 20px;
+  margin: 0;
+  color: #666;
+}
+#service2 .service-item p {
   color: #888;
   padding-top: 10px;
   margin: 0;
@@ -331,7 +360,7 @@ font header .navbar-default .navbar-nav li a:hover {
   border: 1px solid #1D1D1D;
   border-radius: 500px;
   display: inline-block;
-  height: 10px;
+  height: 50px;
   margin-right: 15px;
   width: 10px;
 }

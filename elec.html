@@ -1,0 +1,185 @@
+---
+layout: page
+title: Electronics and Software Subsytems
+permalink: /elec
+---
+
+<!-- Service Start -->
+<section id="service2">
+  <div class="container">
+    <div class="row">
+      <div class="section-title">
+        <h2 id="Internal_Link">Electronics and Software Subsystems</h2>
+        <p>Electronics and Software Subsystems roughly comprise of</p>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-sm-5 col-md-2">
+        <div class="service-item">
+          <i class="ion-steam"></i>
+          <h4><a href="#Control">Arm and Steer Controls</a></h4> <br/>
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-2">
+        <div class="service-item">
+          <i class="ion-code-download"></i>
+          <h4><a href="{{ site.baseurl }}/mech">Autonomous Navigation</a></h4> <br/>
+         </div>
+      </div>
+      <div class="col-sm-5 col-md-2">
+        <div class="service-item">
+          <i class="ion-android-desktop"></i>
+          <h4><a href="{{ site.baseurl }}/mech">Base Station GUI</a></h4> <br/>
+         </div>
+      </div>
+      <div class="col-sm-5 col-md-2">
+        <div class="service-item">
+          <i class="ion-wifi"></i>
+          <h4><a href="{{ site.baseurl }}/bio">Wireless Communications</a></h4> <br/>
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-2">
+        <div class="service-item">
+          <i class="ion-flash"></i>
+          <h4><a href="{{ site.baseurl }}/blog">Power Distribution and BMS</a></h4><br/>
+          <ul style="list-style-type:none">
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-2">
+        <div class="service-item">
+          <i class="ion-document-text"></i>
+          <h4><a href="{{ site.baseurl }}/blog">Documentation</a></h4><br/>
+          <ul style="list-style-type:none">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Content Start -->
+<section id="intro">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-6">
+        <div class="testimonial-carousel">
+          <div id="testimonial-slider" class="owl-carousel">
+            <div>
+                <img src="img/control1.png" alt="IMG" height=100% width=100%>
+                
+            </div>
+            <div>
+               <img src="img/control2.png" alt="IMG" height=100% width=100%>
+            </div>
+            <div>
+              <img src="img/control3.png" alt="IMG" height=100% width=100%>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2 id="Control">Control Systems for rover</h2>
+            <p>Written primarily for closed loop operation of Arm and Steer</p>
+          </div>
+          <p> 
+            <ul style="list-style-type:circle">
+            <li>All 6 wheels are driven independently from GPIO pins of Raspberry Pi 3 in open loop, and rear 4 wheels are steered using closed loop control (see fig. on left)</li>
+            <li>Steering is controlled by Roboclaw Motor Drivers onto which we employ a Type II control system, to track ramp input (see fig. on left, tracking of i/p, dotted line, is done by o/p, solid purple)</li>
+            <li>We are working towards getting a state space description of the same, so that we can employ Inverse Kinematics or LQR control for the arm, using Moveit! motion planning plugin (see fig. on left)</li>
+            </ul>  
+          </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      
+    </div>
+  </div>
+</section>
+<!--
+<section id="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h2>Fun Facts About Us</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="block">
+          <ul class="counter-box clearfix">
+            <li>
+              <div class="block">
+                <i class="ion-ios-chatboxes-outline"></i>
+                <h4 class="counter">20000</h4>
+                <span>Cups Of Coffee</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="ion-ios-glasses-outline"></i>
+                <h4 class="counter">20000</h4>
+                <span>Cups Of Coffee</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="ion-ios-compose-outline"></i>
+                <h4 class="counter">20000</h4>
+                <span>Cups Of Coffee</span>
+              </div>
+            </li>
+            <li>
+              <div class="block">
+                <i class="ion-ios-timer-outline"></i>
+                <h4 class="counter">20000</h4>
+                <span>Cups Of Coffee</span>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="testimonial-carousel">
+          <div id="testimonial-slider" class="owl-carousel">
+            <div>
+                <img src="img/cotation.png" alt="IMG">
+                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                <div class="user">
+                  <img src="img/item-img1.jpg" alt="Pepole">
+                  <p><span>Rose Ray</span> CEO-Themefisher</p>
+                </div>
+            </div>
+            <div>
+              <img src="img/cotation.png" alt="IMG">
+                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                <div class="user">
+                  <img src="img/item-img1.jpg" alt="Pepole">
+                  <p><span>Rose Ray</span> CEO-Themefisher</p>
+                </div>
+            </div>
+            <div>
+              <img src="img/cotation.png" alt="IMG">
+                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                <div class="user">
+                  <img src="img/item-img1.jpg" alt="Pepole">
+                  <p><span>Rose Ray</span> CEO-Themefisher</p>
+                </div>
+            </div>
+            <div>
+              <img src="img/cotation.png" alt="IMG">
+                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
+                <div class="user">
+                  <img src="img/item-img1.jpg" alt="Pepole">
+                  <p><span>Rose Ray</span> CEO-Themefisher</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
