@@ -3,6 +3,7 @@ $(document).ready(function(){
 
 	$("#portfolio-contant-active").mixItUp();
 
+	$("#portfolio-contant-active2").mixItUp();
 
 	$("#testimonial-slider").owlCarousel({
 	    paginationSpeed : 500,      
