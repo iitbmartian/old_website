@@ -66,7 +66,8 @@ a:active {
 --*/
 header {
   background: #fff;
-  padding: 20px 0;
+  padding: 0px 0;
+  background-image: url("../img/header.png");
 }
 header .navbar {
   margin-bottom: 0px;
@@ -83,8 +84,8 @@ header .navbar-default .navbar-nav {
   padding-top: 10px;
 }
 header .navbar-default .navbar-nav li a {
-  color: #333333;
-  padding: 10px 26px;
+  color: #fff;
+  padding: 27px 10px;
   font-size: 15px;
 }
 font header .navbar-default .navbar-nav li a:hover {
@@ -260,7 +261,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Feature Start
 --*/
 #feature {
-  background: url("../img/feature-bg.JPG");
+  background: url("../img/feature-bg.png");
   background-position: 50% 94px;
   width: 100%;
   display: block;
