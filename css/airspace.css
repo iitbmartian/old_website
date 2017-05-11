@@ -49,7 +49,7 @@ a:active {
   text-decoration: none !important;
 }
 .section-title {
-  margin-bottom: 70px;
+  margin-bottom: 0px;
 }
 .section-title h2 {
   text-transform: uppercase;
@@ -370,6 +370,7 @@ font header .navbar-default .navbar-nav li a:hover {
   display: inline-block;
   border: 0px;
 }
+
 /*--
 	features Start
 --*/

@@ -23,32 +23,32 @@ permalink: /elec
       <div class="col-sm-5 col-md-2">
         <div class="service-item">
           <i class="ion-code-download"></i>
-          <h4><a href="{{ site.baseurl }}/mech">Autonomous Navigation</a></h4> <br/>
+          <h4><a href="#Autonom">Autonomous Navigation</a></h4> <br/>
          </div>
       </div>
       <div class="col-sm-5 col-md-2">
         <div class="service-item">
           <i class="ion-android-desktop"></i>
-          <h4><a href="{{ site.baseurl }}/mech">Base Station GUI</a></h4> <br/>
+          <h4><a href="#BTS">Base Station GUI</a></h4> <br/>
          </div>
       </div>
       <div class="col-sm-5 col-md-2">
         <div class="service-item">
           <i class="ion-wifi"></i>
-          <h4><a href="{{ site.baseurl }}/bio">Wireless Communications</a></h4> <br/>
+          <h4><a href="#Comm">Wireless Communications</a></h4> <br/>
         </div>
       </div>
       <div class="col-sm-5 col-md-2">
         <div class="service-item">
           <i class="ion-flash"></i>
-          <h4><a href="{{ site.baseurl }}/blog">Power Distribution and BMS</a></h4><br/>
+          <h4><a href="#BMS">Power Distribution and BMS</a></h4><br/>
           <ul style="list-style-type:none">
         </div>
       </div>
       <div class="col-sm-5 col-md-2">
         <div class="service-item">
           <i class="ion-document-text"></i>
-          <h4><a href="{{ site.baseurl }}/blog">Documentation</a></h4><br/>
+          <h4><a href="#Doc">Documentation</a></h4><br/>
           <ul style="list-style-type:none">
         </div>
       </div>
@@ -56,13 +56,14 @@ permalink: /elec
   </div>
 </section>
 
+
 <!-- Content Start -->
 <section id="intro">
   <div class="container">
     <div class="row">
      <div class="col-md-6">
-        <div class="testimonial-carousel">
-          <div id="testimonial-slider" class="owl-carousel">
+        
+          <div id="testimonial-slider">
             <div>
                 <img src="img/control1.png" alt="IMG" height=100% width=100%>
                 
@@ -75,7 +76,7 @@ permalink: /elec
             </div>
             
           </div>
-        </div>
+        
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="block">
@@ -96,6 +97,143 @@ permalink: /elec
     </div>
   </div>
 </section>
+
+<section id="Autonom">
+  <div class="container">
+    <div class="row">
+    
+              <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2 id="Autonom">Autonomous Operation of Rover</h2>
+            <p>The rover navigates autonomously from one GPS coordinate to other, avoiding obstacles coming in path</p>
+          </div>
+          <p> 
+            <ul style="list-style-type:circle">
+            <li>Surrounding mapping is done using SLAM; requires a high-power LIDAR for visualising the map </li>
+            <li>The whole system is up and running on Gazebo in a simulated environment and the algorithm is being improved for better performance. (video on right)</li>
+            <li>We are working to employ the algorithm on our <a href="img/mark3.png">smaller prototype</a> of the rover first, and then later shift to main rover</li>
+            </ul>  
+          </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+
+     <div class="col-md-5">
+       <iframe src="https://drive.google.com/file/d/0BzrafcdwRhiEdDI0SkZvUE1CTDg/preview" width="640" height="400"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="Base Station GUI">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-6">
+        
+          <div id="testimonial-slider2">
+            <div>
+                <img src="img/GUI1.png" alt="IMG" height=100% width=100%>
+                
+            </div>
+            <div>
+               <img src="img/GUI2.png" alt="IMG" height=100% width=100%>
+            </div>
+            <div>
+              <img src="img/GUI3.png" alt="IMG" height=100% width=100%>
+            </div>
+            
+          </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2 id="Control">Base Station GUI</h2>
+            <p>Implemented over multiple machines in a distributed manner (pic on left), using RQT dashboard, providing visual feedback of IP Cameras, APM and other on board sensors.</p>
+          </div>
+          <p> 
+            <ul style="list-style-type:circle">
+            <li>URDF Visualisation: As a first step towards automating the system, an URDF of rover (pic on left) was made, which helps us translate what rover is doing on field onto the GUI and autonomous node.</li>
+            <li>Plotting GPS data from APM module (pic on left): GPS lat long received from APM using mavros library is mapped onto RViZ aerialmapdisplay plugin using QT gui.</li>
+            <li>IP Camera interfacing with GUI: RTSP stream of IP camera is obtained using opencv and using ROS-OpenCV bridge, stream is converted to image message. The GUI widget ‘Image View’, is used to visualise the message.</li>
+            <li>Currently working towards incorporating rover diagnostics into GUI, by plotting various critical sensor data using RQT plot, storing data in ROS bags for analysis, and raising appropriate warnings and errors occuring in on-board code, on GUI</li>
+            </ul>  
+          </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Comm">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2 id="Comm">Wireless Communications</h2>
+            <p>Establishment of Wireless Communications between Rover and Base Station, over 1 km non LOS range</p>
+          </div>
+          <p>
+            <ul style="list-style-type:circle">
+            <li>We are using commercial off-the-shelf PoE wireless bridges (<a href="https://www.ruckuswireless.com/products/access-points/zoneflex-outdoor/zoneflex-p300">Ruckus P300</a>) which operate in 5.6 GHz band (IEEE 802.11ac), and have maximum EIRP of 36 dBm,   compliant with FCC UNII-1 regulations.</li>
+            <li>These have been tested to give 1 km non-LOS range, and use adaptive channel selection techniques (Ruckus ChannelFly) to shift to a different channel once the current channel starts degrading, to tolerate interference.</li>
+            <li>Video feed is obtained via IP cameras on board and telemetry is achieved by passing messages between ROS nodes running on board (which interface with various sensors) and nodes running on base station (which interface with GUI).</li>
+            <li>We also have 900 MHz Xbee modules as a backup link for the communication systems, which have been interfaced with ROS framework as well.</li>
+            </ul>
+          </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <img src="img/ruckus.png" alt="Img" width="640" height="400">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<section id="BMS">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2 id="Comm">Power Distribution and BMS</h2>
+            <p>Under Construction</p>
+          </div>
+          <p>
+            <ul style="list-style-type:circle">
+            <li>Point 1</li>
+            <li>Point 2</li>
+            <li>Point 3</li>
+            <li>Point 4</li>
+            </ul>
+          </p>
+        </div>
+      </div><!-- .col-md-7 close -->
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <img src="img/BMS.png" alt="Img" width="640" height="400">
+        </div>
+      </div><!-- .col-md-5 close -->
+    </div>
+  </div>
+</section>
+
+<section id="Doc">
+  <div class="container">
+    <div class="row">
+
+          <div class="section-title">
+            <h2 id="Doc">Documentation and Code Storage</h2>
+            <p>The team uses Github primarily for code storage and documentation. Have a look at <a href ="https://github.com/iitbmartian"> iitbmartian </a> github organisation for all our codes and latest updates. All the repositories have well documented README's which indicate how to set-up and debug the code. Also, we contributed to a small, application intensive wiki page on <a href="wncc-iitb.org/wiki/index.php/ROS">ROS</a> for Web and Coding Club (WNCC) Wiki.</p>
+          </div>
+
+    </div>
+  </div>
+</section>
+
+
 <!--
 <section id="testimonial">
   <div class="container">

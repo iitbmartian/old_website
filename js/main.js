@@ -10,6 +10,11 @@ $(document).ready(function(){
 	    autoPlay: 3000,
 	});
 
+	$("#testimonial-slider2").owlCarousel({
+	    paginationSpeed : 500,      
+	    singleItem:true,
+	    autoPlay: 3000,
+	});
 
 
 
