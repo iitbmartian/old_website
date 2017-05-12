@@ -501,15 +501,16 @@ font header .navbar-default .navbar-nav li a:hover {
   float: left;
   overflow: hidden;
   margin: 6px;
-  height: 250px;
+  height: 230px;
   width: 250px;
   position: relative;
 }
 #portfolio-work .block .portfolio-contant2 ul li {
   float: left;
   overflow: hidden;
-  margin: 6px;
+    margin: 6px;
   position: relative;
+
 }
 #portfolio-work .block .portfolio-contant ul li:hover .overly {
   opacity: 1;
