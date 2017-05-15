@@ -86,8 +86,8 @@ permalink: /elec
           </div>
           <p> 
             <ul style="list-style-type:circle">
-            <li>All 6 wheels are driven independently from GPIO pins of Raspberry Pi 3 in open loop, and rear 4 wheels are steered using closed loop control (see fig. on left)</li>
-            <li>Steering is controlled by Roboclaw Motor Drivers onto which we employ a Type II control system, to track ramp input (see fig. on left, tracking of i/p, dotted line, is done by o/p, solid purple)</li>
+            <li>All 6 wheels are driven independently from GPIO pins of Raspberry Pi 3 in open loop, 4 steering wheels (Front and Rear) are steered using closed loop control (see fig. on left)</li>
+            <li>Steering is controlled by Roboclaw Motor Drivers onto which we employ a Type II control system, to track ramp input (see fig. on left, tracking of i/p, dotted line, is done by o/p, solid purple), while drive is controlled by Hercules motor Drivers</li>
             <li>We are working towards getting a state space description of the same, so that we can employ Inverse Kinematics or LQR control for the arm, using Moveit! motion planning plugin (see fig. on left)</li>
             </ul>  
           </p>
