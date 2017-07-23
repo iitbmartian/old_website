@@ -6,7 +6,9 @@ exclude:
   - "README.md"
   - "LICENSE.md"
   - "*.gemspec"
-
+  - "Rakefile"
+  - "config.ru"
+  - ".gitignore"
 keep_files:
   - "CNAME"
   - ".git"
@@ -35,3 +37,7 @@ descriptions:
 
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+jekyll_auth:
+  whitelist:
+    - "^((?!minutes).)*$"
