@@ -1,227 +1,144 @@
----
-layout: page
-title: Mars Rover Team, IIT-Bombay
-permalink: /
----
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Slider Start -->
-<section id="slider">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-2">
-        <div class="block">
-          <h1 class="animated fadeInUp">Mars Rover Team <br> IIT-Bombay</h1>
-          <p class="animated fadeInUp">The IITB Mars Rover project is a student initiative at IIT Bombay to build a prototype Mars rover capable of extra-terrestrial robotics.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Wrapper Start -->
-<section id="intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7 col-sm-12">
-        <div class="block">
-          <div class="section-title">
-            <h2 id="Internal_Link_2">About Us</h2>
-            <p>We are a young tech team of IIT-Bombay, looking forward to make our mark!</p>
-          </div>
-          <p>The team consists of budding engineers, ranging from various departments and study programmes offered at IIT-B, working to gain hand on knowledge about development of all terrain rovers and space biosciences, which combinedly, help us towards our deployment of the rover </p>
-        </div>
-      </div><!-- .col-md-7 close -->
-      <div class="col-md-5 col-sm-12">
-        <div class="block">
-          <img src="img/logo_20.png" alt="Img">
-        </div>
-      </div><!-- .col-md-5 close -->
-    </div>
-  </div>
-</section>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRT-IITB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/home.css">
+</head>
 
-<section id="feature">
-<div class="container">
-  <div class="row">
+<body>
+    <nav id="transparent-navbar" class="navbar navbar-expand-lg red-hat-font">
+        <a class="navbar-brand" href="index.html">
+            <img src="./src/img/logo_mrt.png" width="75px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger-animated"><span></span><span></span><span></span></div>
+        </button>
 
-    <div class="col-md-6">
-      <iframe src="https://www.youtube.com/embed/EtQ17VXOWpU" width="550" height="450"></iframe>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./rovers.html">Rovers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./subdivisions.html">Subdivisions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">Teams</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="empty-div"></div>
+    <div id="home" class="bg-image div-centered-text">
+        <div class="home-intro-text">
+            <h2>MARS ROVER TEAM</h2>Student initiative at IIT Bombay to build a prototype Mars rover capable of
+            extra-terrestrial robotics.
+        </div>
     </div>
-    <div class="col-md-6">
-      <h2>Current Status</h2>
-      <p>The current iteration of the rover has a 4 wheeled rocker bogie based suspension system modified to fit our specifications. It rests on four toughened rubber balloon wheels, which provide grip on sandy and slippery surfaces and suspension from shock.</p>
-      <p>The team has been selected to compete at URC-2019, with a ranking of 20 amongst 84 participating teams worldwide.The Systems Acceptance Review video for the competition is attached.</p>
-      <a href="{{ site.baseurl }}/gal" class="btn btn-view-works">View Gallery, to see the rover in action</a>
+    <div id="aboutUs" class="bg-image">
+        <div class="aboutUs-text">
+            <h2>ABOUT US</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        </div>
     </div>
-  </div>
-  </div>
-</div>
-</section>
 
-<!-- Service Start -->
-<section id="service">
-  <div class="container">
-    <div class="row">
-      <div class="section-title">
-        <h2 id="Internal_Link">Subsystems</h2>
-        <p>The Team is roughly divided into the following four subsystems</p>
-      </div>
-    </div>
-    <div class="row ">
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-code"></i>
-          <h4><a href="{{ site.baseurl }}/elec">Electronics and Software</a></h4> <br/>
-          <ul style="list-style-type:none">
-          <li>Onboard Software</li>
-          <li>Control System</li>
-          <li>Automation</li>
-          <li>BMS and Power Distribution</li>
-          <li>Communication</li>
-          </ul>  
+    <div id="elec_soft" class="bg-image">
+        <div class="sub-home-text">
+            <h2>Electronics & Software</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
         </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-ios-gear"></i>
-          <h4><a href="{{ site.baseurl }}/mech">Mechanical</a></h4> <br/>
-          <ul style="list-style-type:none">
-          <li>Robotic Arm and End Effector</li>
-          <li>Suspension</li>
-          <li>Bioassembly</li>
-          <li>Chassis</li>
-          <li>Wheels</li>
-          </ul>
-         </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-leaf"></i>
-          <h4><a href="{{ site.baseurl }}/bio">Bioscience</a></h4> <br/>
-          <ul style="list-style-type:none">
-          <li>Life Detection Tests</li>
-          <li>Bio Sensors</li>
-          <li>Geological Survey</li>
-          <li>Sample Collection</li>
-          <li>Literature Survey</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <div class="service-item">
-          <i class="ion-clipboard"></i>
-          <h4><a href="{{ site.baseurl }}/des">Design and Logistics</a></h4><br/>
-          <ul style="list-style-type:none">
-          <li>CDR Video Shoot</li>
-          <li>Webpage Design</li>
-          <li>Shipping Arrangements</li>
-          <li>Sponsorship and Funding</li>
-          <li>Travel and Visa Arrangements</li>
-          </ul>
-        </div>
-      </div>
-   
+        <div class="centered-element"><button class="homeButton">Read More</button></div>
     </div>
-  </div>
-</section>
-<!-- Call to action Start -->
-<section id="call-to-action">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block">
-          <h2>We look forward to take suggestions from you!</h2>
-          <p> If you have any inputs which could improve our design, or just want to join the team, please feel free to, 
-          </p>
-          <a class="btn btn-default btn-call-to-action" href="{{ site.baseurl }}/contact" >Contact Us!</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Content Start 
-<section id="testimonial">
-  <div class="container">
-    <div class="row">
-      <div class="section-title text-center">
-        <h2>Fun Facts About Us</h2>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="block">
-          <ul class="counter-box clearfix">
-            <li>
-              <div class="block">
-                <i class="ion-ios-chatboxes-outline"></i>
-                <h4 class="counter">20000</h4>
-                <span>Cups Of Coffee</span>
-              </div>
-            </li>
-            <li>
-              <div class="block">
-                <i class="ion-ios-glasses-outline"></i>
-                <h4 class="counter">20000</h4>
-                <span>Cups Of Coffee</span>
-              </div>
-            </li>
-            <li>
-              <div class="block">
-                <i class="ion-ios-compose-outline"></i>
-                <h4 class="counter">20000</h4>
-                <span>Cups Of Coffee</span>
-              </div>
-            </li>
-            <li>
-              <div class="block">
-                <i class="ion-ios-timer-outline"></i>
-                <h4 class="counter">20000</h4>
-                <span>Cups Of Coffee</span>
-              </div>
-            </li>
 
-          </ul>
+    <div id="mechanical" class="bg-image">
+        <div class="sub-home-text">
+            <h2>Mechanical</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="testimonial-carousel">
-          <div id="testimonial-slider" class="owl-carousel">
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            <div>
-              <img src="img/cotation.png" alt="IMG">
-                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            <div>
-              <img src="img/cotation.png" alt="IMG">
-                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray</span> CEO-Themefisher</p>
-                </div>
-            </div>
-            <div>
-              <img src="img/cotation.png" alt="IMG">
-                <p>"This Company created an e-commerce site with the tools to make our business a success, with innovative ideas we feel that our site has unique elements that make us stand out from the crowd."</p>
-                <div class="user">
-                  <img src="img/item-img1.jpg" alt="Pepole">
-                  <p><span>Rose Ray</span> CEO-Themefisher</p>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="centered-element"><button class="homeButton">Read More</button></div>
     </div>
-  </div>
-</section>
--->
+
+    <div id="bioscience" class="bg-image">
+        <div class="sub-home-text">
+            <h2>Bioscience</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        </div>
+        <div class="centered-element"><button class="homeButton">Read More</button></div>
+    </div>
+
+    <div id="mdm" class="bg-image">
+        <div class="sub-home-text">
+            <h2>Media, Design & Marketing</h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+        </div>
+        <div class="centered-element"><button class="homeButton">Read More</button></div>
+    </div>
+
+    <div id="contact_home" class="bg-image" style="height: 156px;">
+        <h2>CONTACT</h2>
+        <div class="mrt-socials">
+            <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./src/js/script.js"></script>
+    <script>
+        AOS.init({
+            disable: false,
+            offset: 80,
+            duration: 1000,
+        });
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162930243-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162930243-1');
+    </script>
+</body>
+
+</html>
