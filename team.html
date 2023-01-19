@@ -12,9 +12,89 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/team.css">
+    
+    
+
+    <style>
+        
+        .teamCard{
+            width: 94vw;
+            display: flex;
+            /* flex-direction: row; */
+            /* justify-content: space-evenly; */
+            /* flex-wrap: wrap; */
+        }
+        .member{
+            background-color: white;
+            border: 2px solid white;
+            margin: 2%;
+            padding: 2% 2%;
+            box-shadow: 8px 8px 5px rgb(18,18,27),-8px -8px 5px rgb(18,18,27) ;
+            /* width: 15vw; */
+        }
+        .teamCard img{
+            width: 75%;
+            border-radius: 50%;
+            border: 4px solid orangered;
+        }
+        h5{
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .role{
+            color: orangered;
+        }
+        i{
+            color: orangered;
+        }
+        .half-section{
+            justify-content: space-evenly;
+            
+        }
+        @media (max-width:950px ) and (min-width:500px){
+            .teamCard{
+                flex-direction: column;
+            }
+            .teamCard img{
+                width: 70%;
+            }
+            .half-section{
+                width: 100vw;
+            }
+            .member{
+                padding: 5%;
+                width:40%;
+                margin: 5% 0;
+            }
+        }
+        @media (max-width:500px){
+            .teamCard{
+                flex-direction: column;
+                padding: 10%;
+            }
+            .teamCard img{
+                width: 70%;
+            }
+
+            .half-section{
+                flex-direction: column;
+                width: 100%;
+            }
+            .member{
+                padding-top: 14px;
+                margin: 7% 0;
+            }
+        }
+        
+    </style>
 </head>
 
-<body>
+<body data-barba="wrapper">
+
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+
     <nav id="transparent-navbar" class="navbar navbar-expand-lg red-hat-font">
         <a class="navbar-brand" href="index.html">
             <img src="./src/img/logo_mrt.png" width="75px">
@@ -28,14 +108,20 @@
             <ul class="navbar-nav mr-auto">
             </ul>
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item animate-this">
                     <a class="nav-link" href="./index.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./rovers.html">Rovers</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./subdivisions.html">Subdivisions</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">Subdivisions</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./subdivisions/mech.html">Mechanical</a></li>
+                        <li><a class="dropdown-item" href="./subdivisions/elec.html">Electronics & Software</a></li>
+                        <li><a class="dropdown-item" href="./subdivisions/bio.html">Bioscience</a></li>
+                        <li><a class="dropdown-item" href="./subdivisions/mdm.html">Design and Logistics</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="team.html">Teams</a>
@@ -44,411 +130,727 @@
                     <a class="nav-link" href="./gallery.html">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./contact.html">Contact</a>
+                    <a class="nav-link" href="./contact-us.html">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="empty-div"></div>
-    <div id="subdivisions" class="bg-image">
-        <h1>
-            TEAMS
-        </h1>
+    <!-- <div class="empty-div"></div> -->
 
-        <!-- Team Leaders-->
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
+    <main data-barba="container" data-barba-namespace="team">
+        <div id="subdivisions" class="bg-image">
+            <h1>
+                TEAMS
+            </h1>
+    
+            <!-- Team Leaders-->
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>    
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="teamCard text-center">
+                <!-- . -->
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta</p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope"  aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-section" style="display: flex;">
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="src/img/nishant.png" alt="">
+                        <h5>Member name</h5>
+                        <h5 class="role">Member role</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis quos illum soluta </p>
+                        <div class="memberSocials">
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+                
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            <div class="mrt-contact mt-5">
+                <h2>CONTACT</h2>
+                <div class="mrt-socials">
+                    <a href="">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+    
                 </div>
             </div>
-
+    
         </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="teamCard text-center">
-            <h2>Team Leaders</h2>
-            <div class="teamCardMembers">
-                <div class="memberCard">
-                    <img src="src/img/nishant.png" alt="">
-                    <h3>Nishant Mittal</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/liza.png" alt="">
-                    <h3>Liza Dahiya</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="memberCard">
-                    <img src="src/img/tejas.png" alt="">
-                    <h3>Tejas Shintre</h3>
-                    <div class="memberSocials">
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="mrt-contact mt-5">
-            <h2>CONTACT</h2>
-            <div class="mrt-socials">
-                <a href="">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                </a>
-
-            </div>
-        </div>
-
-    </div>
+    </main>
+    
     <!-- scripts -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
     <script src="./src/js/script.js"></script>
+    <!-- load barba (UMD version) -->
+    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+
+    <!-- load gsap animation library (minified version) -->
+    <!-- <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
+    <script src="./src/js/main.js"></script> -->
     <script>
         AOS.init({
             disable: false,
