@@ -5,6 +5,9 @@ $(window).scroll(function () {
         $(".navbar").removeClass("nav-scrolled");
     }
 });
+$(window).on("load", function(){
+    $(".loader-wrapper").fadeOut("500");
+});
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
