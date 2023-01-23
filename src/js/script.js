@@ -6,7 +6,9 @@ $(window).scroll(function () {
     }
 });
 $(window).on("load", function(){
-    $(".loader-wrapper").fadeOut("500");
+    $(".loader-wrapper").fadeOut("slow");
+    
+
 });
 
 var prevScrollpos = window.pageYOffset;
