@@ -438,3 +438,45 @@ button {
     height: 0%;
   }
 }
+
+
+/* demo test */
+
+#sponsor{
+  text-align: center;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../img/sponsor/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: white;
+  padding: 50px 0px 50px 0px;
+}
+
+.spon-head{
+  color: black;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.spon-img{
+  display: inline-block;
+  margin: 40px;
+}
+
+.iit-img{
+  display: block;
+  margin: 40px auto;
+}
+
+@media (max-width: 792px) {
+  .servo-img{
+      margin-top: 80px;
+  }
+}
+
+.rights-foot{
+  background-color: black;
+  color: gray;
+  text-align: center;
+  font-size: small;
+  padding-bottom: 10px;
+}
